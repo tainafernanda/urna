@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center; /* Centraliza o quadrado horizontalmente */
+    align-items: center; /* Centraliza o quadrado verticalmente */
+    height: 100vh; /* Altura da viewport para centralizar verticalmente */
+    margin: 0; /* Remove a margem padrão do body */
+}
+
+button {
+    background-color: #007bff; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.quadrado-externo1 {
+    display: flex; /* Usar flexbox para alinhar os elementos do quadrado */
+    flex-direction: row; /* Alinha os elementos em linha */
+    justify-content: center; /* Distribui os elementos uniformemente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    width: 690px; /* largura do quadrado */
+    height: 500px; /* altura do quadrado (igual à largura) */
+    background-color: rgb(253, 253, 253); /* cor de fundo do quadrado */
+    border: 5px solid black; /* borda do quadrado */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+.quadrado-externo2 {
+    display: flex; /* Usar flexbox para alinhar os elementos do quadrado */
+    flex-direction: row; /* Alinha os elementos em linha */
+    justify-content: center; /* Distribui os elementos uniformemente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    width: 400px; /* largura do quadrado */
+    height: 500px; /* altura do quadrado (igual à largura) */
+    background-color: rgb(253, 253, 253); /* cor de fundo do quadrado */
+    border: 5px solid black; /* borda do quadrado */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+.quadrado-interno {
+    width: 95%; /* largura do quadrado interno */
+    height: 95%; /* altura do quadrado interno */
+    background-color: white; /* cor de fundo do quadrado interno */
+    border: 5px solid rgb(0, 0, 0); /* borda do quadrado interno */
+    margin: auto; /* Centraliza o quadrado interno horizontalmente */
+}
+
+.retangulo-horizontal-cinza {
+    width: 98%; /* Largura do retângulo */
+    height: 70px; /* Altura do retângulo */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
+    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
+    margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
+    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
+    top: 7%; /* Centraliza o retângulo verticalmente */
+    transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+}
+
+.linha-horizontal-preta {
+    width: 60%; /* Ajuste a largura da linha conforme necessário */
+    height: 4px; /* Espessura da linha */
+    top: 89%; /* Centraliza a linha verticalmente */
+    background-color: black; /* Cor da linha */
+    position: absolute; /* Para posicionar a linha dentro do retângulo */
+    bottom: 0; /* Posiciona a linha na parte inferior do retângulo */
+    left: 50%; /* Move a linha para o centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza a linha em relação ao seu ponto de ancoragem */
+}
+.retangulo-horizontal2-cinza {
+    width: 98%; /* Largura do retângulo */
+    height: 160px; /* Altura do retângulo */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
+    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
+    margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
+    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
+    top: 15%; /* Centraliza o retângulo verticalmente */
+    transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+}
+
+
+.retangulo-horizontal3-cinza {
+    width: 66%; /* Largura do retângulo */
+    height: 150px; /* Altura do retângulo */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
+    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
+    margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
+    right: 16%; /* Centraliza o retângulo horizontalmente */
+    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
+    top: 44%; /* Centraliza o retângulo verticalmente */
+    transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+}
