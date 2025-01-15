@@ -8,8 +8,10 @@ interface Character {
 
 @Component({
   selector: 'app-urna',
+  standalone: true,
+  imports: [],
   templateUrl: './urna.component.html',
-  styleUrls: ['./urna.component.css']
+  styleUrls: ['./urna.component.scss']
 })
 export class UrnaComponent {
   characters: Character[] = [
