@@ -1,20 +1,29 @@
 .container {
-    display: flex; /* Usar flexbox para o contêiner pai */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 90vh; /* Ajuste a altura conforme necessário */
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: 100vw; /* Largura da tela */
+    height: 100vh; /* Altura da tela */
+    margin: 0;
+    background-image: url('https://wallpapercave.com/wp/wp3575403.jpg'); /* Link da imagem */
+    background-size: cover; /* Tamanho da imagem */
+    background-position: center; /* Posição da imagem */
+    background-repeat: no-repeat; /* Repetição da imagem */
 }
 
 .quadrado-externo1 {
     display: flex; /* Usar flexbox para alinhar os elementos do quadrado */
     flex-direction: row; /* Alinha os elementos em linha */
-    justify-content: center; /* Distribui os elementos uniformemente */
+    position: static;
     align-items: center; /* Centraliza os elementos verticalmente */
-    width: 690px; /* largura do quadrado */
-    height: 500px; /* altura do quadrado (igual à largura) */
+    width: 692px; /* largura do quadrado */
+    height: 530px; /* altura do quadrado (igual à largura) */
     background-color: rgb(253, 253, 253); /* cor de fundo do quadrado */
     border: 5px solid black; /* borda do quadrado */
     font-size: 24px; /* Tamanho da fonte */
+    margin: 0; /* Sem margem */
+    margin-top: 110px; /* Margem superior */
+    margin-left: 195px;
 }
 
 .quadrado-externo2 {
@@ -22,14 +31,20 @@
     flex-direction: row; /* Alinha os elementos em linha */
     justify-content: center; /* Distribui os elementos uniformemente */
     align-items: center; /* Centraliza os elementos verticalmente */
-    width: 400px; /* largura do quadrado */
-    height: 500px; /* altura do quadrado (igual à largura) */
+    width: 401px; /* largura do quadrado */
+    height: 530px; /* altura do quadrado (igual à largura) */
     background-color: rgb(253, 253, 253); /* cor de fundo do quadrado */
     border: 5px solid black; /* borda do quadrado */
     font-size: 24px; /* Tamanho da fonte */
+    margin: 0; /* Sem margem */
+    margin-top: 110px; /* Margem superior */
+    margin-left: -1%; 
 }
 
 .quadrado-interno {
+    display: block; /* Padrão, não usa flexbox */
+    flex-direction: row; /* Não aplicável */
+    position: static; /* Padrão */
     width: 95%; /* largura do quadrado interno */
     height: 95%; /* altura do quadrado interno */
     background-color: white; /* cor de fundo do quadrado interno */
@@ -38,33 +53,42 @@
 }
 
 .retangulo-horizontal-cinza {
+    display: block; /* Padrão, não usa flexbox */
+    flex-direction: row; /* Não aplicável */
+    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     width: 98%; /* Largura do retângulo */
     height: 70px; /* Altura do retângulo */
     background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
     border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
     margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
-    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     top: 7%; /* Centraliza o retângulo verticalmente */
     transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
 }
 
 .linha-horizontal-preta {
-    width: 60%; /* Ajuste a largura da linha conforme necessário */
-    height: 4px; /* Espessura da linha */
-    top: 89%; /* Centraliza a linha verticalmente */
-    background-color: black; /* Cor da linha */
-    position: absolute; /* Para posicionar a linha dentro do retângulo */
-    bottom: 0; /* Posiciona a linha na parte inferior do retângulo */
-    left: 50%; /* Move a linha para o centro horizontalmente */
-    transform: translateX(-50%); /* Centraliza a linha em relação ao seu ponto de ancoragem */
+    display: block;
+    flex-direction: row;
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background-color: black;
+    bottom: 13%; /* Ajuste o valor para subir a linha */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
 }
+
+
+
 .retangulo-horizontal2-cinza {
+    display: block; /* Padrão, não usa flexbox */
+    flex-direction: row; /* Não aplicável */
+    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     width: 98%; /* Largura do retângulo */
     height: 160px; /* Altura do retângulo */
     background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
     border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
     margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
-    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     top: 15%; /* Centraliza o retângulo verticalmente */
     transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
 }
@@ -85,10 +109,13 @@
 
 .numero-container {
     display: flex; /* Usar flexbox para alinhar os elementos */
+    flex-direction: row; /* Padrão, não especificado no código */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
+    margin: 30px 50% 0 0; /* Espaçamento superior e centralização horizontal */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    margin-top: 30px; /* Espaçamento superior */
-    margin-right: 50%; /* Centraliza horizontalmente */
 }
 
 .numero-texto {
@@ -98,12 +125,21 @@
 
 .quadradinhos {
     display: flex; /* Usar flexbox para alinhar os quadradinhos */
+    flex-direction: row; /* Padrão, não especificado no código */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
+    margin: 0; /* Sem margem */
     gap: 0px; /* Espaçamento entre os quadradinhos */
 }
 
 .quadradinho {
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
     width: 30px; /* Largura do quadradinho */
     height: 30px; /* Altura do quadradinho */
+    margin: 0; /* Sem margem */
     border: 4px solid black; /* Borda do quadradinho */
     background-color: transparent; /* Fundo transparente */
 }
@@ -112,43 +148,62 @@
 
 .nome-container {
     display: flex; /* Usar flexbox para alinhar os elementos */
+    flex-direction: row; /* Padrão, não especificado no código */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
+    margin: 50px 0 0 0; /* Espaçamento acima do nome */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    margin-top: 50px; /* Espaçamento acima do nome */
 }
 
 .nome-texto {
+    display: inline-block; /* Para permitir margens e alinhamento */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
     font-size: 18px; /* Tamanho da fonte da palavra "Nome" */
     margin-right: 40px; /* Espaçamento à direita do texto */
 }
 
 .linha-nome {
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
     width: 70%; /* Ajuste a largura da linha conforme necessário */
     height: 4px; /* Espessura da linha */
     background-color: black; /* Cor da linha */
+    margin: 0; /* Sem margem */
 }
 
 
 .quadrado-horizontal-cinza {
-    width: 200px; /* Largura do quadrado */
-    height: 150px; /* Altura do quadrado (igual à largura para ser um quadrado) */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border:3px solid rgb(182, 182, 182); /* Borda do quadrado */ ;
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
     position: absolute; /* Posiciona o quadrado dentro do retângulo */
+    width: 200px; /* Largura do quadrado */
+    height: 150px; /* Altura do quadrado */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
+    border: 3px solid rgb(182, 182, 182); /* Borda do quadrado */
     left: 126%; /* Centraliza horizontalmente */
     top: 50%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    margin: 0; /* Sem margem */
 }
 
 .quadrado-fotos {
-    width: 176px; /* Largura do quadrado */
-    height: 129px; /* Altura do quadrado (igual à largura para ser um quadrado) */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border:3px solid rgb(0, 0, 0); /* Borda do quadrado */ ;
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
     position: absolute; /* Posiciona o quadrado dentro do retângulo */
+    width: 176px; /* Largura do quadrado */
+    height: 129px; /* Altura do quadrado */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
+    border: 3px solid rgb(0, 0, 0); /* Borda do quadrado */
     left: 54%; /* Centraliza horizontalmente */
     top: 50%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    margin: 0; /* Sem margem */
 }
 
 
@@ -156,29 +211,40 @@
 
 
 .retangulo-vertical-cinza {
-    width: 385px; /* Largura do quadrado */
-    height: 413px; /* Altura do quadrado (igual à largura para ser um quadrado) */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border:3px solid rgb(172, 172, 172); /* Borda do quadrado */ ;
-    position: absolute; /* Posiciona o quadrado dentro do retângulo */
-    left: 72%; /* Centraliza horizontalmente */
-    top: 45%; /* Centraliza verticalmente */
-    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    display: block;
+    flex-direction: row;
+    position: absolute;
+    width: 385px;
+    height: 445px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(172, 172, 172);
+    left: 56.5%; /* Ajuste a posição horizontal para 7.5% */
+    top: 128px;
+    margin: 0;
 }
 
 .botoes-numeros {
     display: grid; /* Usar grid para alinhar os botões */
+    flex-direction: row; /* Não aplicável, pois usa grid */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 0px; /* Espaçamento entre os botões */
     justify-content: center; /* Centraliza os botões horizontalmente */
     align-items: center; /* Centraliza os botões verticalmente */
+    margin: 0; /* Sem margem */
 }
 
 .botoes-numeros button {
-    width: 130px; /* Defina a largura desejada */
-    height: 70px; /* Defina a altura desejada */
-    font-size: 18px; /* Tamanho da fonte (opcional) */
+    display: inline-block; /* Para permitir largura e altura personalizadas */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
+    width: 130px; /* Largura do botão */
+    height: 70px; /* Altura do botão */
+    font-size: 18px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor do mouse */
+    margin: 0; /* Sem margem */
 }
 
 .botoes-numeros button:nth-child(10) {
@@ -186,37 +252,45 @@
 }
 
 .retangulo-horizontal-cinza-botoes {
-    width: 385px; /* Largura do quadrado */
-    height: 56px; /* Altura do quadrado (igual à largura para ser um quadrado) */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border:3px solid rgb(172, 172, 172); /* Borda do quadrado */ ;
-    position: absolute; /* Posiciona o quadrado dentro do retângulo */
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: absolute; /* Posiciona o retângulo dentro do contêiner */
+    width: 385px; /* Largura do retângulo */
+    height: 56px; /* Altura do retângulo */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
+    border: 3px solid rgb(172, 172, 172); /* Borda do retângulo */
     left: 50%; /* Centraliza horizontalmente */
     top: 110%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    margin: 0; /* Sem margem */
 }
 
 .botoes-conclusão-votação {
-        display: flex;
-        flex-direction: row; /* Alinha os elementos em linha */
-        justify-content: center; /* Distribui os elementos uniformemente */
-        gap: 12px; /* Espaçamento entre os botões */
-        align-items: center;
-        width: 97%; /* Largura do retângulo */
-        height: 90%; /* Altura do retângulo */
-        padding: 8px; /* Espaçamento interno do retângulo */
-        margin-top: -5px; /* Centraliza verticalmente */
-      }
+    display: flex; /* Usar flexbox para alinhar os botões */
+    flex-direction: row; /* Alinha os elementos em linha */
+    position: static; /* Padrão, não especificado no código */
+    width: 97%; /* Largura do contêiner */
+    height: 90%; /* Altura do contêiner */
+    justify-content: center; /* Distribui os elementos uniformemente */
+    gap: 12px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 8px; /* Espaçamento interno */
+    margin-top: -5px; /* Ajuste de margem superior */
+ }
 
 .botoes-conclusão-votação button {
-        font-size: 16px; /* Tamanho da fonte */
-        padding: 8px 5px; /* Espaçamento interno dos botões */
-        width: 120px; /* Largura dos botões */
-        height: 40px; /* Altura dos botões */
-        cursor: pointer; /* Cursor do mouse */
-        border: 2px solid black; /* Remove a borda padrão dos botões */
-        background-color: rgb(255, 255, 255); /* Cor de fundo dos botões */
-    }
+    display: inline-block; /* Para permitir largura e altura personalizadas */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
+    width: 120px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 8px 5px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor do mouse */
+    border: 2px solid black; /* Borda do botão */
+    background-color: rgb(255, 255, 255); /* Cor de fundo do botão */
+    margin: 0; /* Sem margem */
+ }
        
       
 
