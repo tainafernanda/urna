@@ -11,6 +11,7 @@
     background-repeat: no-repeat; /* Repetição da imagem */
 }
 
+
 .quadrado-externo1 {
     display: flex; /* Usar flexbox para alinhar os elementos do quadrado */
     flex-direction: row; /* Alinha os elementos em linha */
@@ -24,6 +25,16 @@
     margin: 0; /* Sem margem */
     margin-top: 110px; /* Margem superior */
     margin-left: 195px;
+    background-image: linear-gradient(
+    to right,
+    #000000, /* Preto */
+    #6c5ce7, /* Roxo */
+    #7a288a, /* Violeta */
+    #660000 /* Vermelho Sangue */
+  );
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .quadrado-externo2 {
@@ -39,6 +50,16 @@
     margin: 0; /* Sem margem */
     margin-top: 110px; /* Margem superior */
     margin-left: -1%; 
+    background-image: linear-gradient(
+    to right,
+    #000000, /* Preto */
+    #6c5ce7, /* Roxo */
+    #7a288a, /* Violeta */
+    #660000 /* Vermelho Sangue */
+  );
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .quadrado-interno {
@@ -47,7 +68,7 @@
     position: static; /* Padrão */
     width: 95%; /* largura do quadrado interno */
     height: 95%; /* altura do quadrado interno */
-    background-color: white; /* cor de fundo do quadrado interno */
+    background-color: rgb(0, 0, 0); /* cor de fundo do quadrado interno */
     border: 5px solid rgb(0, 0, 0); /* borda do quadrado interno */
     margin: auto; /* Centraliza o quadrado interno horizontalmente */
 }
@@ -58,11 +79,13 @@
     position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     width: 98%; /* Largura do retângulo */
     height: 70px; /* Altura do retângulo */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
-    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
-    margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
-    top: 7%; /* Centraliza o retângulo verticalmente */
-    transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+    background-color: #6c5ce7; /* Roxo */
+   border: 3px solid #000000; /* Preto */
+   margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
+   top: 7%; /* Centraliza o retângulo verticalmente */
+   transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+   box-shadow: 0 0 7px #FFD700; /* Dourado */
+   color: #660000; /* Vermelho Sangue */
 }
 
 .linha-horizontal-preta {
@@ -86,24 +109,28 @@
     position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     width: 98%; /* Largura do retângulo */
     height: 160px; /* Altura do retângulo */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
-    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
+    background-color: #6c5ce7; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
     top: 15%; /* Centraliza o retângulo verticalmente */
     transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 
 .retangulo-horizontal3-cinza {
     width: 66%; /* Largura do retângulo */
     height: 150px; /* Altura do retângulo */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
-    border: 3px solid rgb(182, 182, 182); /* Borda do retângulo */
+    background-color: #6c5ce7; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
     right: 16%; /* Centraliza o retângulo horizontalmente */
     position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
     top: 44%; /* Centraliza o retângulo verticalmente */
     transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 
@@ -184,26 +211,30 @@
     position: absolute; /* Posiciona o quadrado dentro do retângulo */
     width: 200px; /* Largura do quadrado */
     height: 150px; /* Altura do quadrado */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border: 3px solid rgb(182, 182, 182); /* Borda do quadrado */
+    background-color: #6c5ce7; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     left: 126%; /* Centraliza horizontalmente */
     top: 50%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
     margin: 0; /* Sem margem */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 .quadrado-fotos {
     display: block; /* Padrão, não especificado no código */
     flex-direction: row; /* Não aplicável, pois não usa flexbox */
     position: absolute; /* Posiciona o quadrado dentro do retângulo */
-    width: 176px; /* Largura do quadrado */
-    height: 129px; /* Altura do quadrado */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do quadrado */
-    border: 3px solid rgb(0, 0, 0); /* Borda do quadrado */
-    left: 54%; /* Centraliza horizontalmente */
+    width: 190px; /* Largura do quadrado */
+    height: 143px; /* Altura do quadrado */
+    background-color: #6c5ce7; /* Roxo */
+    border: 3px solid #000000; /* Preto */
+    left: 50%; /* Centraliza horizontalmente */
     top: 50%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
     margin: 0; /* Sem margem */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 
@@ -215,12 +246,13 @@
     flex-direction: row;
     position: absolute;
     width: 385px;
-    height: 445px;
-    background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(172, 172, 172);
-    left: 56.5%; /* Ajuste a posição horizontal para 7.5% */
-    top: 128px;
+    height: 447px;
+    background-color: #000000; /* Roxo */
+    border: 3px solid #000000; /* Preto */
+    left: 57%; /* Ajuste a posição horizontal para 7.5% */
+    top: 125px;
     margin: 0;
+    
 }
 
 .botoes-numeros {
@@ -229,6 +261,8 @@
     position: static; /* Padrão, não especificado no código */
     width: auto; /* Não especificado no código */
     height: auto; /* Não especificado no código */
+    background-color: #000000; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     grid-template-columns: repeat(3, 1fr); /* 3 colunas */
     gap: 0px; /* Espaçamento entre os botões */
     justify-content: center; /* Centraliza os botões horizontalmente */
@@ -242,9 +276,13 @@
     position: static; /* Padrão, não especificado no código */
     width: 130px; /* Largura do botão */
     height: 70px; /* Altura do botão */
+    background-color: #6c5ce7; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     font-size: 18px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor do mouse */
     margin: 0; /* Sem margem */
+    box-shadow: 0 0 8px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 .botoes-numeros button:nth-child(10) {
@@ -257,12 +295,14 @@
     position: absolute; /* Posiciona o retângulo dentro do contêiner */
     width: 385px; /* Largura do retângulo */
     height: 56px; /* Altura do retângulo */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do retângulo */
-    border: 3px solid rgb(172, 172, 172); /* Borda do retângulo */
+    background-color: #000000; /* Roxo */
+    border: 3px solid #000000; /* Preto */
     left: 50%; /* Centraliza horizontalmente */
     top: 110%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
     margin: 0; /* Sem margem */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
 }
 
 .botoes-conclusão-votação {
@@ -276,9 +316,10 @@
     align-items: center; /* Centraliza verticalmente */
     padding: 8px; /* Espaçamento interno */
     margin-top: -5px; /* Ajuste de margem superior */
+    cursor: pointer;
  }
 
-.botoes-conclusão-votação button {
+ .botoes-conclusão-votação button {
     display: inline-block; /* Para permitir largura e altura personalizadas */
     flex-direction: row; /* Não aplicável, pois não usa flexbox */
     position: static; /* Padrão, não especificado no código */
@@ -287,10 +328,26 @@
     font-size: 16px; /* Tamanho da fonte */
     padding: 8px 5px; /* Espaçamento interno do botão */
     cursor: pointer; /* Cursor do mouse */
-    border: 2px solid black; /* Borda do botão */
-    background-color: rgb(255, 255, 255); /* Cor de fundo do botão */
-    margin: 0; /* Sem margem */
- }
+    border: 2px solid #000000; /* Borda do botão */
+    background-color: #FFFFFF; /* Branco */
+    color: #000000; /* Preto */
+  }
        
-      
+   
+  .botoes-conclusão-votação button:nth-child(1) {
+    background-color: #fdfdfd; /* Branco */
+    color: #000000; /* Branco */
+  }
+  
+  .botoes-conclusão-votação button:nth-child(2) {
+    background-color: #fa7900; /* Verde */
+    color: #000000; /* Branco */
+  }
+
+  .botoes-conclusão-votação button:nth-child(3) {
+    background-color: #00fa00; /* Verde */
+    color: #000000; /* Branco */
+  }
+
+
 
