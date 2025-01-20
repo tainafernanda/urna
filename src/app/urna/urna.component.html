@@ -19,7 +19,10 @@
                         <div class="linha-nome"></div>
                     </div>
                     <div class="quadrado-horizontal-cinza">
-                        <div class="quadrado-fotos"></div>
+                        <div class="quadrado-fotos">
+                            <!-- Exibe a imagem do personagem selecionado -->
+                            <img *ngIf="selectedCharacter" [src]="selectedCharacter.image" alt="{{ selectedCharacter.name }}" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -29,26 +32,39 @@
     <div class="quadrado-externo2">
         <div class="retangulo-vertical-cinza">
             <div class="botoes-numeros">
-                <button>9</button>
-                <button>8</button>
-                <button>7</button>
-                <button>6</button>
-                <button>5</button>
-                <button>4</button>
-                <button>3</button>
-                <button>2</button>
-                <button>1</button>
-                <button>0</button> <!-- O botão 0 agora está abaixo do botão 2 -->
+                <button (click)="characterId = 9">9</button>
+                <button (click)="characterId = 8">8</button>
+                <button (click)="characterId = 7">7</button>
+                <button (click)="characterId = 6">6</button>
+                <button (click)="characterId = 5">5</button>
+                <button (click)="characterId = 4">4</button>
+                <button (click)="characterId = 3">3</button>
+                <button (click)="characterId = 2">2</button>
+                <button (click)="characterId = 1">1</button>
+                <button (click)="characterId = 0">0</button> <!-- O botão 0 agora está abaixo do botão 2 -->
             </div>
         
             <div class="retangulo-horizontal-cinza-botoes">
                 <div class="botoes-conclusão-votação">
                     <button>Branco</button>
                     <button>Corrige</button>
-                    <button>confirma</button>
+                    <button>Confirma</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Exibe informações do personagem selecionado -->
+    <ng-container *ngIf="selectedCharacter; else noCharacter">
+        <h3>Personagem Selecionado:</h3>
+        <p><strong>Nome:</strong> {{ selectedCharacter.name }}</p>
+        <p><strong>Profissão:</strong> {{ selectedCharacter.profession }}</p>
+    </ng-container>
+
+    <!-- Template alternativo para quando não há personagem selecionado -->
+    <ng-template #noCharacter>
+        <div *ngIf="characterId !== null">
+            <p>Personagem não encontrado. Tente novamente.</p>
+        </div>
+    </ng-template>
+</div>

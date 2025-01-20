@@ -1,31 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Character {
   id: number;
   name: string;
-  image: string; // Caminho da imagem do personagem
+  image: string; // URL da imagem do personagem
+  profession: string; // Profissão do personagem
 }
 
 @Component({
   selector: 'app-urna',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], // Importa o CommonModule para usar ngIf
   templateUrl: './urna.component.html',
   styleUrls: ['./urna.component.scss']
 })
-export class UrnaComponent {
-  characters: Character[] = [
-    { id: 1, name: 'Personagem 1', image: 'assets/images/personagem1.png' },
-    { id: 2, name: 'Personagem 2', image: 'assets/images/personagem2.png' },
-    { id: 3, name: 'Personagem 3', image: 'assets/images/personagem3.png' },
-    { id: 4, name: 'Personagem 4', image: 'assets/images/personagem4.png' },
-    { id: 5, name: 'Personagem 5', image: 'assets/images/personagem5.png' },
-    { id: 6, name: 'Personagem 6', image: 'assets/images/personagem6.png' }
-  ];
-  
+export class UrnaComponent implements OnInit {
+  characters: Character[] = [];
   selectedCharacter: Character | null = null;
+  characterId: number | null = null; // ID do personagem digitado pelo usuário
 
-  selectCharacter(character: Character) {
-    this.selectedCharacter = character;
+  ngOnInit() {
+    // Inicializa a lista de personagens
+    this.characters = [
+      { id: 1, name: 'Wanda Maximoff', image: 'url_da_foto_1.jpg', profession: 'Portadora do Caos' },
+      { id: 2, name: 'Ravena', image: 'url_da_foto_2.jpg', profession: 'Empata' },
+      { id: 3, name: 'Mulher Gato', image: 'url_da_foto_3.jpg', profession: 'Ladra de Jóias' },
+      { id: 4, name: 'Viúva Negra', image: 'url_da_foto_4.jpg', profession: 'Membro dos Vingadores' },
+      { id: 5, name: 'Mavis', image: 'url_da_foto_5.jpg', profession: 'Filha do Drácula' },
+      { id: 6, name: 'Muzan Kibutsuji', image: 'url_da_foto_6.jpg', profession: 'Rei dos Demônios' },
+      // Adicione mais personagens se necessário
+    ];
+  }
+
+  onSelectCharacter() {
+    if (this.characterId !== null) {
+      // Converte o ID para um número inteiro
+      const id = Number(this.characterId);
+      this.selectedCharacter = this.characters.find(character => character.id === id) || null;
+    }
   }
 }
