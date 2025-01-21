@@ -237,6 +237,20 @@
     color: #660000; /* Vermelho Sangue */
 }
 
+.fotos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.foto-personagem {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do quadrado */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Adiciona bordas arredondadas, se desejado */
+}
+
+
+
 
 /*Segunda Parte da Urna*/
 

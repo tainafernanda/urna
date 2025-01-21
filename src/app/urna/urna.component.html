@@ -9,9 +9,9 @@
                     <div class="numero-container">
                         <span class="numero-texto">Número</span>
                         <div class="quadradinhos">
-                            <div class="quadradinho"></div>
-                            <div class="quadradinho"></div>
-                            <div class="quadradinho"></div>
+                            <div class="quadradinho">7</div>
+                            <div class="quadradinho">7</div>
+                            <div class="quadradinho">7</div>
                         </div>
                     </div>
                     <div class="nome-container">
@@ -20,13 +20,15 @@
                     </div>
                     <div class="quadrado-horizontal-cinza">
                         <div class="quadrado-fotos">
-                            <!-- Exibe a imagem do personagem selecionado -->
-                            <img *ngIf="selectedCharacter" [src]="selectedCharacter.image" alt="{{ selectedCharacter.name }}" />
+                            <!-- Exibe as imagens dos personagens -->
+                            <div class="fotos-container">
+                                <img *ngFor="let character of characters" [src]="character.image" alt="{{ character.name }}" class="foto-personagem" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- Quadrado interno preto dentro do quadrado externo 1 -->
+        </div>
     </div>
 
     <div class="quadrado-externo2">
@@ -41,7 +43,7 @@
                 <button (click)="characterId = 3">3</button>
                 <button (click)="characterId = 2">2</button>
                 <button (click)="characterId = 1">1</button>
-                <button (click)="characterId = 0">0</button> <!-- O botão 0 agora está abaixo do botão 2 -->
+                <button (click)="characterId = 0">0</button>
             </div>
         
             <div class="retangulo-horizontal-cinza-botoes">
@@ -54,14 +56,12 @@
         </div>
     </div>
 
-    <!-- Exibe informações do personagem selecionado -->
     <ng-container *ngIf="selectedCharacter; else noCharacter">
         <h3>Personagem Selecionado:</h3>
         <p><strong>Nome:</strong> {{ selectedCharacter.name }}</p>
         <p><strong>Profissão:</strong> {{ selectedCharacter.profession }}</p>
     </ng-container>
 
-    <!-- Template alternativo para quando não há personagem selecionado -->
     <ng-template #noCharacter>
         <div *ngIf="characterId !== null">
             <p>Personagem não encontrado. Tente novamente.</p>
