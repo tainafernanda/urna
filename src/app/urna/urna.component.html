@@ -3,26 +3,36 @@
         <div class="quadrado-interno">
             <div class="retangulo-horizontal-cinza">
                 <div class="linha-horizontal-preta"></div>
+                <div class="profissao-container">
+                    <span class="profissao-texto">{{ selectedCharacter ? selectedCharacter.profession : 'Nenhuma profissão' }}</span>
+                </div>
             </div>
             <div class="retangulo-horizontal2-cinza">
                 <div class="retangulo-horizontal3-cinza">
                     <div class="numero-container">
                         <span class="numero-texto">Número</span>
                         <div class="quadradinhos">
-                            <div class="quadradinho">7</div>
-                            <div class="quadradinho">7</div>
-                            <div class="quadradinho">7</div>
+                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[0] : '0' }}</div>
+                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[1] : '0' }}</div>
+                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[2] : '0' }}</div>
                         </div>
                     </div>
                     <div class="nome-container">
                         <span class="nome-texto">Nome:</span>
-                        <div class="linha-nome"></div>
+                        <div class="linha-nome">{{ selectedCharacter ? selectedCharacter.name : 'Nenhum' }}</div>
                     </div>
-                    <div class="quadrado-horizontal-cinza">
-                        <div class="quadrado-fotos">
-                            <!-- Exibe as imagens dos personagens -->
-                            <div class="fotos-container">
-                                <img *ngFor="let character of characters" [src]="character.image" alt="{{ character.name }}" class="foto-personagem" />
+                </div>
+            </div>
+            <div class="quadrado-horizontal-cinza">
+                <div class="quadrado-fotos">
+                    <div class="fotos-container">
+                        <div *ngFor="let character of characters" class="character-box" (click)="onSelectCharacter(character.id)">
+                            <div class="quadrado-foto">
+                                <img [src]="character.image" alt="{{ character.name }}" class="foto-personagem" />
+                            </div>
+                            <div class="character-info">
+                                <h3>{{ character.id.toString().padStart(3, '0') }}. {{ character.name }}</h3>
+                                <p>{{ character.profession }}</p>
                             </div>
                         </div>
                     </div>
@@ -34,16 +44,16 @@
     <div class="quadrado-externo2">
         <div class="retangulo-vertical-cinza">
             <div class="botoes-numeros">
-                <button (click)="characterId = 9">9</button>
-                <button (click)="characterId = 8">8</button>
-                <button (click)="characterId = 7">7</button>
-                <button (click)="characterId = 6">6</button>
-                <button (click)="characterId = 5">5</button>
-                <button (click)="characterId = 4">4</button>
-                <button (click)="characterId = 3">3</button>
-                <button (click)="characterId = 2">2</button>
-                <button (click)="characterId = 1">1</button>
-                <button (click)="characterId = 0">0</button>
+                <button (click)="onSelectCharacter(1)">1</button>
+                <button (click)="onSelectCharacter(2)">2</button>
+                <button (click)="onSelectCharacter(3)">3</button>
+                <button (click)="onSelectCharacter(4)">4</button>
+                <button (click)="onSelectCharacter(5)">5</button>
+                <button (click)="onSelectCharacter(6)">6</button>
+                <button (click)="onSelectCharacter(7)">7</button>
+                <button (click)="onSelectCharacter(8)">8</button>
+                <button (click)="onSelectCharacter(9)">9</button>
+                <button (click)="onSelectCharacter(0)">0</button>
             </div>
         
             <div class="retangulo-horizontal-cinza-botoes">
@@ -56,15 +66,18 @@
         </div>
     </div>
 
-    <ng-container *ngIf="selectedCharacter; else noCharacter">
-        <h3>Personagem Selecionado:</h3>
-        <p><strong>Nome:</strong> {{ selectedCharacter.name }}</p>
-        <p><strong>Profissão:</strong> {{ selectedCharacter.profession }}</p>
-    </ng-container>
-
+    <!-- Seção para exibir o personagem selecionado -->
+    <div class="selected-character-container" *ngIf="selectedCharacter">
+        <h3></h3>
+        <p><strong></strong> {{ selectedCharacter.name }}</p>
+        <p><strong></strong> {{ selectedCharacter.profession }}</p>
+        <p><strong></strong> {{ selectedCharacter.votingCode }}</p>
+        <img [src]="selectedCharacter.image" alt="{{ selectedCharacter.name }}" class="foto-personagem" />
+    </div>
+    
     <ng-template #noCharacter>
-        <div *ngIf="characterId !== null">
-            <p>Personagem não encontrado. Tente novamente.</p>
+        <div>
+            <p>Nenhum personagem selecionado.</p>
         </div>
     </ng-template>
 </div>
