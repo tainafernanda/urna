@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    flex-wrap: wrap; /* Permite que os quadrados quebrem para a pròxima linha */
     flex-direction: row;
     position: static;
     width: 100vw; /* Largura da tela */
@@ -276,57 +277,24 @@
     margin: 0; /* Sem margem */
 }
 
-
 .quadrado-horizontal-cinza {
     display: block; /* Padrão, não especificado no código */
-    flex-direction: row; /* Não aplicável, pois não usa flexbox */
     position: absolute; /* Posiciona o quadrado dentro do retângulo */
     width: 200px; /* Largura do quadrado */
     height: 150px; /* Altura do quadrado */
     background-color: #6c5ce7; /* Roxo */
     border: 3px solid #000000; /* Preto */
-    left: 126%; /* Centraliza horizontalmente */
-    top: 50%; /* Centraliza verticalmente */
+    left: 49%; /* Centraliza horizontalmente */
+    top: 41%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
     margin: 0; /* Sem margem */
     box-shadow: 0 0 7px #FFD700; /* Dourado */
     color: #660000; /* Vermelho Sangue */
-}
-
-.quadrado-fotos {
-    display: block; /* Padrão, não especificado no código */
-    flex-direction: row; /* Não aplicável, pois não usa flexbox */
-    position: absolute; /* Posiciona o quadrado dentro do retângulo */
-    width: 190px; /* Largura do quadrado */
-    height: 143px; /* Altura do quadrado */
-    background-color: #6c5ce7; /* Roxo */
-    border: 3px solid #000000; /* Preto */
-    left: 50%; /* Centraliza horizontalmente */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
-    margin: 0; /* Sem margem */
-    box-shadow: 0 0 7px #FFD700; /* Dourado */
-    color: #660000; /* Vermelho Sangue */
-}
-
-.character-box {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 150px; /* Largura do quadrado */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
-}
-
-.character-box:hover {
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
 }
 
 .quadrado-foto {
     width: 100%; /* Largura do quadrado */
-    height: 100px; /* Altura do quadrado */
+    height: 100%; /* Altura do quadrado (ajustada para diminuir a foto) */
     overflow: hidden; /* Esconde partes da imagem que saem do quadrado */
     border-radius: 4px; /* Bordas arredondadas */
     display: flex;
@@ -335,12 +303,12 @@
     background-color: #f0f0f0; /* Cor de fundo */
 }
 
-.quadrado-foto img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* Cobre o quadrado sem distorcer a imagem */
+.foto-personagem {
+    width: 100%; /* Ajusta a largura da imagem para preencher o contêiner (diminuído) */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 100%; /* Garante que a altura máxima da imagem não exceda a altura do contêiner */
+    object-fit: cover; /* Faz a imagem cobrir todo o contêiner, mantendo a proporção */
 }
-
 
 
 
