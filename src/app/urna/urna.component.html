@@ -1,89 +1,60 @@
 <div class="container">
+
     <div class="quadrado-externo1">
+        
         <div class="quadrado-interno">
+
             <div class="retangulo-horizontal-cinza">
                 <div class="linha-horizontal-preta"></div>
                 <div class="profissao-container">
                     <span class="profissao-texto">{{ selectedCharacter ? selectedCharacter.profession : 'Nenhuma profissão' }}</span>
                 </div>
             </div>
+
             <div class="retangulo-horizontal2-cinza">
+
                 <div class="retangulo-horizontal3-cinza">
                     <div class="numero-container">
                         <span class="numero-texto">Número</span>
                         <div class="quadradinhos">
-                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[0] : '0' }}</div>
-                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[1] : '0' }}</div>
-                            <div class="quadradinho">{{ selectedCharacter ? selectedCharacter.id.toString().padStart(3, '0')[2] : '0' }}</div>
+                            <div class="quadradinho">{{ inputValues[0] || '0' }}</div>
+                            <div class="quadradinho">{{ inputValues[1] || '0' }}</div>
+                            <div class="quadradinho">{{ inputValues[2] || '0' }}</div>
                         </div>
                     </div>
+
                     <div class="nome-container">
-                        <span class="nome-texto">Nome:</span>
-                        <div class="linha-nome">{{ selectedCharacter ? selectedCharacter.name : 'Nenhum' }}</div>
+                        <div class="nome-texto">Nome:</div>
+                        <div class="linha-nome-container">
+                            <div class="character-name">{{ selectedCharacter ? selectedCharacter.name : 'Nenhum' }}</div>
+                            <div class="linha-nome"></div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="quadrado-horizontal-cinza">
                 <div class="quadrado-foto">
                     <img *ngIf="selectedCharacter" [src]="selectedCharacter.image" alt="{{ selectedCharacter.name }}" class="foto-personagem" /> 
                 </div>
             </div>
-            
-            <div class="fotos-container">
-                <div *ngFor="let character of characters" class="character-box" (click)="onSelectCharacter(character)">
-                    <img [src]="character.image" alt="{{ character.name }}" class="foto-personagem" />
-                </div>
-            </div>
-
-            <!-- Código inserido aqui -->
-            <div class="outros-personagens-container">
-                <div *ngFor="let character of characters">
-                    <div *ngIf="selectedCharacter?.id !== character.id">
-                        <img [src]="character.image" alt="{{character.name}}">
-                    </div>
-                </div>
-            </div>
-            <!-- Fim do código inserido -->
         </div>
     </div>
 
     <div class="quadrado-externo2">
         <div class="retangulo-vertical-cinza">
             <div class="botoes-numeros">
-                <button (click)="onSelectCharacter(characters[0])">1</button>
-                <button (click)="onSelectCharacter(characters[1])">2</button>
-                <button (click)="onSelectCharacter(characters[2])">3</button>
-                <button (click)="onSelectCharacter(characters[3])">4</button>
-                <button (click)="onSelectCharacter(characters[4])">5</button>
-                <button (click)="onSelectCharacter(characters[5])">6</button>
-                <button (click)="onSelectCharacter(characters[6])">7</button>
-                <button (click)="onSelectCharacter(characters[7])">8</button>
-                <button (click)="onSelectCharacter(characters[8])">9</button>
-                <button (click)="onSelectCharacter(characters[9])">0</button>
+                <button *ngFor="let numero of numeros" (click)="adicionarNumero(numero)">{{ numero }}</button>
             </div>
         
             <div class="retangulo-horizontal-cinza-botoes">
                 <div class="botoes-conclusão-votação">
-                    <button>Branco</button>
-                    <button>Corrige</button>
-                    <button>Confirma</button>
+                    <button (click)="limparNumeros()">Branco</button>
+                    <button (click)="corrigirNumeros()">Corrige</button>
+                    <button (click)="confirmarNumeros()">Confirma</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Seção para exibir o personagem selecionado -->
-    <div class="selected-character-container" *ngIf="selectedCharacter">
-        <h3></h3>
-        <p><strong></strong> {{ selectedCharacter.name }}</p>
-        <p><strong></strong> {{ selectedCharacter.profession }}</p>
-        <p><strong></strong> {{ selectedCharacter.votingCode }}</p>
-        <img *ngIf="selectedCharacter" [src]="selectedCharacter.image" alt="{{ selectedCharacter.name }}" class="foto-personagem" />
-    </div>
-    
-    <ng-template #noCharacter>
-        <div>
-            <p>Nenhum personagem selecionado.</p>
-        </div>
-    </ng-template>
 </div>

@@ -3,9 +3,9 @@
     flex-wrap: wrap; /* Permite que os quadrados quebrem para a pròxima linha */
     flex-direction: row;
     position: static;
-    width: 100vw; /* Largura da tela */
-    height: 100vh; /* Altura da tela */
-    margin: 0;
+    width: 98vw; /* Largura da tela */
+    height: 98vh; /* Altura da tela */
+    margin: 0%;
     background-image: url('https://wallpapercave.com/wp/wp3575403.jpg'); /* Link da imagem */
     background-size: cover; /* Tamanho da imagem */
     background-position: center; /* Posição da imagem */
@@ -74,18 +74,16 @@
 }
 
 .retangulo-horizontal-cinza {
-    display: block; /* Padrão, não usa flexbox */
-    flex-direction: row; /* Não aplicável */
-    position: relative; /* Posiciona o retângulo relativo ao quadrado interno */
-    width: 98%; /* Largura do retângulo */
-    height: 70px; /* Altura do retângulo */
-    background-color: #6c5ce7; /* Roxo */
-    border: 3px solid #000000; /* Preto */
-    margin: 10px auto; /* Centraliza o retângulo horizontalmente e adiciona margem superior/inferior */
-    top: 7%; /* Centraliza o retângulo verticalmente */
-    transform: translateY(-50%); /* Centraliza o retângulo verticalmente */
-    box-shadow: 0 0 7px #FFD700; /* Dourado */
-    color: #660000; /* Vermelho Sangue */
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    height: 80px;
+    width: 528px;
+    border: 2px solid rgb(165, 165, 165);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profissao-container {
@@ -130,6 +128,7 @@
     #7a288a, /* Violeta */
     #660000 /* Vermelho Sangue */
   );
+
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -214,68 +213,69 @@
     width: auto; /* Não especificado no código */
     height: auto; /* Não especificado no código */
     margin: 30px 50% 0 0; /* Espaçamento superior e centralização horizontal */
+    margin-left: 40px;
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
 }
 
 .numero-texto {
     font-size: 18px; /* Tamanho da fonte da palavra "Número" */
-    margin-right: 10px; /* Espaçamento à direita do texto */
+    margin-right: 33px; /* Espaçamento à direita do texto */
 }
 
 .quadradinhos {
     display: flex; /* Usar flexbox para alinhar os quadradinhos */
-    flex-direction: row; /* Padrão, não especificado no código */
-    position: static; /* Padrão, não especificado no código */
-    width: auto; /* Não especificado no código */
-    height: auto; /* Não especificado no código */
-    margin: 0; /* Sem margem */
-    gap: 0px; /* Espaçamento entre os quadradinhos */
+    flex-direction: row; /* Alinha os quadradinhos em linha */
+    justify-content: center; /* Centraliza os quadradinhos horizontalmente */
+    align-items: center; /* Centraliza os quadradinhos verticalmente */
+    gap: 10px; /* Espaçamento entre os quadradinhos */
 }
 
 .quadradinho {
-    display: block; /* Padrão, não especificado no código */
-    flex-direction: row; /* Não aplicável, pois não usa flexbox */
-    position: static; /* Padrão, não especificado no código */
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
     width: 30px; /* Largura do quadradinho */
     height: 30px; /* Altura do quadradinho */
-    margin: 0; /* Sem margem */
-    border: 4px solid black; /* Borda do quadradinho */
+    border: 3px solid black; /* Borda do quadradinho */
     background-color: transparent; /* Fundo transparente */
 }
 
 
 
 .nome-container {
-    display: flex; /* Usar flexbox para alinhar os elementos */
-    flex-direction: row; /* Padrão, não especificado no código */
-    position: static; /* Padrão, não especificado no código */
-    width: auto; /* Não especificado no código */
-    height: auto; /* Não especificado no código */
-    margin: 50px 0 0 0; /* Espaçamento acima do nome */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 29px;
 }
 
 .nome-texto {
-    display: inline-block; /* Para permitir margens e alinhamento */
-    flex-direction: row; /* Não aplicável, pois não usa flexbox */
-    position: static; /* Padrão, não especificado no código */
-    width: auto; /* Não especificado no código */
-    height: auto; /* Não especificado no código */
-    font-size: 18px; /* Tamanho da fonte da palavra "Nome" */
-    margin-right: 40px; /* Espaçamento à direita do texto */
+    font-size: 18px;
+    margin-left: 16px; 
+}
+
+.linha-nome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left: 10%; /* Espaço entre "Nome:" e a linha */
 }
 
 .linha-nome {
-    display: block; /* Padrão, não especificado no código */
-    flex-direction: row; /* Não aplicável, pois não usa flexbox */
-    position: static; /* Padrão, não especificado no código */
-    width: 70%; /* Ajuste a largura da linha conforme necessário */
-    height: 4px; /* Espessura da linha */
-    background-color: black; /* Cor da linha */
-    margin: 0; /* Sem margem */
+    width: 100%;
+    height: 4px;
+    background-color: black;
 }
+
+.character-name {
+    text-align: center;
+    display: block;
+    padding: 0 5px; /* Espaço ao redor do texto */
+}
+
 
 .quadrado-horizontal-cinza {
     display: block; /* Padrão, não especificado no código */
@@ -284,8 +284,8 @@
     height: 150px; /* Altura do quadrado */
     background-color: #6c5ce7; /* Roxo */
     border: 3px solid #000000; /* Preto */
-    left: 49%; /* Centraliza horizontalmente */
-    top: 41%; /* Centraliza verticalmente */
+    left: 48.7%; /* Centraliza horizontalmente */
+    top: 39.8%; /* Centraliza verticalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
     margin: 0; /* Sem margem */
     box-shadow: 0 0 7px #FFD700; /* Dourado */
@@ -306,10 +306,13 @@
 .foto-personagem {
     width: 100%; /* Ajusta a largura da imagem para preencher o contêiner (diminuído) */
     height: auto; /* Mantém a proporção da imagem */
-    max-height: 100%; /* Garante que a altura máxima da imagem não exceda a altura do contêiner */
     object-fit: cover; /* Faz a imagem cobrir todo o contêiner, mantendo a proporção */
 }
 
+.character-box {
+    display: inline-block;
+    margin: 5px;
+  }
 
 
 /*Segunda Parte da Urna*/
