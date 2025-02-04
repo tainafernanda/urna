@@ -33,7 +33,7 @@ export class UrnaComponent implements OnInit {
   selectedCharacter: Character | null = null;
 
   // Variável que contém os números de 1 a 9
-  numeros: number[] = Array.from({ length: 9 }, (_, i) => i + 1);
+  numeros: number[] = [9,8,7,6,5,4,3,2,1,0]
   inputValues: string[] = ['', '', '']; // Armazena os valores dos inputs
 C: any;
 
