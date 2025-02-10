@@ -1,0 +1,62 @@
+.retangulo-vertical-cinza {
+    display: block;
+    flex-direction: row;
+    position: absolute;
+    width: 385px;
+    height: 447px;
+    background-color: #000000; /* Roxo */
+    border: 3px solid #000000; /* Preto */
+    left: 57%; /* Ajuste a posição horizontal para 7.5% */
+    top: 125px;
+    margin: 0;
+    
+}
+
+
+
+
+.botoes-conclusão-votação {
+    display: flex; /* Usar flexbox para alinhar os botões */
+    flex-direction: row; /* Alinha os elementos em linha */
+    position: static; /* Padrão, não especificado no código */
+    width: 97%; /* Largura do contêiner */
+    height: 90%; /* Altura do contêiner */
+    justify-content: center; /* Distribui os elementos uniformemente */
+    gap: 12px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 8px; /* Espaçamento interno */
+    margin-top: -5px; /* Ajuste de margem superior */
+    cursor: pointer;
+ }
+
+ .botoes-conclusão-votação button {
+    display: inline-block; /* Para permitir largura e altura personalizadas */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: static; /* Padrão, não especificado no código */
+    width: 120px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 8px 5px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor do mouse */
+    border: 2px solid #000000; /* Borda do botão */
+    background-color: #FFFFFF; /* Branco */
+    color: #000000; /* Preto */
+  }
+       
+   
+  .botoes-conclusão-votação button:nth-child(1) {
+    background-color: #fdfdfd; /* Branco */
+    color: #000000; /* Branco */
+  }
+  
+  .botoes-conclusão-votação button:nth-child(2) {
+    background-color: #fa7900; /* Verde */
+    color: #000000; /* Branco */
+  }
+
+  .botoes-conclusão-votação button:nth-child(3) {
+    background-color: #00fa00; /* Verde */
+    color: #000000; /* Branco */
+  }
+
+

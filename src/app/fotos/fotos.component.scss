@@ -1,0 +1,21 @@
+.quadrado-foto {
+    width: 100%; /* Largura do quadrado */
+    height: 100%; /* Altura do quadrado (ajustada para diminuir a foto) */
+    overflow: hidden; /* Esconde partes da imagem que saem do quadrado */
+    border-radius: 4px; /* Bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo */
+}
+
+.foto-personagem {
+    width: 100%; /* Ajusta a largura da imagem para preencher o contêiner (diminuído) */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Faz a imagem cobrir todo o contêiner, mantendo a proporção */
+}
+
+.character-box {
+    display: inline-block;
+    margin: 5px;
+  }

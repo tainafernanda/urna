@@ -1,0 +1,5 @@
+<button (click)="ObterNumeroClicado(number)" *ngFor="let number of numbers" class="botao">{{ number }}</button>
+
+<div class="botoes-numeros">
+    <button *ngFor="let numero of numbers" (click)="adicionarNumero(numero)">{{ numero }}</button>
+</div>

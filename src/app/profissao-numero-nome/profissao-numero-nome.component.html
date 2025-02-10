@@ -1,0 +1,22 @@
+<div class="linha-horizontal-preta"></div>
+
+    <div class="profissao-container">
+        <span class="profissao-texto">{{ selectedCharacter ? selectedCharacter.profession : 'Nenhuma profissão' }}</span>
+    </div>
+
+
+    <div class="numero-container">
+        <span class="numero-texto">Número</span>
+        <div class="quadradinhos">
+            <div class="quadradinho">{{ inputValues[0] || '0' }}</div>
+            <div class="quadradinho">{{ inputValues[1] || '0' }}</div>
+            <div class="quadradinho">{{ inputValues[2] || '0' }}</div>
+        </div>
+    </div>
+
+
+    <div class="nome-texto">Nome:</div>
+        <div class="linha-nome-container">
+            <div class="character-name">{{ selectedCharacter ? selectedCharacter.name : 'Nenhum' }}</div>
+            <div class="linha-nome"></div>
+        </div>

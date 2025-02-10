@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.botao {
+    width: 32%;
+    margin: 2px;
+    text-align: center;
+    height: 20%;
+}
+
+.retangulo-horizontal-cinza-botoes {
+    display: block; /* Padrão, não especificado no código */
+    flex-direction: row; /* Não aplicável, pois não usa flexbox */
+    position: absolute; /* Posiciona o retângulo dentro do contêiner */
+    width: 385px; /* Largura do retângulo */
+    height: 56px; /* Altura do retângulo */
+    background-color: #000000; /* Roxo */
+    border: 3px solid #000000; /* Preto */
+    left: 50%; /* Centraliza horizontalmente */
+    top: 110%; /* Centraliza verticalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    margin: 0; /* Sem margem */
+    box-shadow: 0 0 7px #FFD700; /* Dourado */
+    color: #660000; /* Vermelho Sangue */
+}
+

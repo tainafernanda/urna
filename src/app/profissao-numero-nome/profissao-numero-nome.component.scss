@@ -1,0 +1,97 @@
+/*Profisssão*/
+
+.profissao-container {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 10px; /* Espaçamento acima do texto */
+}
+
+.profissao-texto {
+    font-size: 18px; /* Tamanho da fonte da profissão */
+    color: #000000; /* Cor do texto (branco) */
+}
+
+.linha-horizontal-preta {
+    display: block;
+    flex-direction: row;
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background-color: black;
+    bottom: 13%; /* Ajuste o valor para subir a linha */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/*Numero Candidato*/
+
+.numero-container {
+    display: flex; /* Usar flexbox para alinhar os elementos */
+    flex-direction: row; /* Padrão, não especificado no código */
+    position: static; /* Padrão, não especificado no código */
+    width: auto; /* Não especificado no código */
+    height: auto; /* Não especificado no código */
+    margin: 30px 50% 0 0; /* Espaçamento superior e centralização horizontal */
+    margin-left: 40px;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.numero-texto {
+    font-size: 18px; /* Tamanho da fonte da palavra "Número" */
+    margin-right: 33px; /* Espaçamento à direita do texto */
+}
+
+.quadradinhos {
+    display: flex; /* Usar flexbox para alinhar os quadradinhos */
+    flex-direction: row; /* Alinha os quadradinhos em linha */
+    justify-content: center; /* Centraliza os quadradinhos horizontalmente */
+    align-items: center; /* Centraliza os quadradinhos verticalmente */
+    gap: 10px; /* Espaçamento entre os quadradinhos */
+}
+
+.quadradinho {
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 30px; /* Largura do quadradinho */
+    height: 30px; /* Altura do quadradinho */
+    border: 3px solid black; /* Borda do quadradinho */
+    background-color: transparent; /* Fundo transparente */
+}
+
+
+/*Nome Candidato*/
+
+.nome-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 29px;
+}
+
+.nome-texto {
+    font-size: 18px;
+    margin-left: 16px; 
+}
+
+.linha-nome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left: 10%; /* Espaço entre "Nome:" e a linha */
+}
+
+.linha-nome {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+.character-name {
+    text-align: center;
+    display: block;
+    padding: 0 5px; /* Espaço ao redor do texto */
+}
