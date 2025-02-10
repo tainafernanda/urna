@@ -68,10 +68,6 @@ C: any;
     this.selectedCharacter = null;
   }
 
-  corrigirNumeros() {
-    this.inputValues = ['', '', ''];
-  }
-
   confirmarNumeros() {
     this.findCharacter();
   }
