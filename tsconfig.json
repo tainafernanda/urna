@@ -7,7 +7,7 @@
     "emitDecoratorMetadata": true,
     "sourceMap": true,
     "outDir": "./dist/out-tsc",
-    "baseUrl": "./",
+    "baseUrl": "./", // Mantendo esta chave
     "paths": {
       "@app/*": ["src/app/*"],
       "@env/*": ["src/environments/*"]
